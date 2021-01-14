@@ -1,6 +1,9 @@
 [build]
+command = "gatsby build"
 publish = "public"
-command = "hugo --gc --minify"
+
+[dev]
+command = "gatsby develop"
 
 [context.production.environment]
 HUGO_VERSION = "0.74.3"

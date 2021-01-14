@@ -14,7 +14,7 @@ const Header = props => (
           textDecoration: `none`,
         }}
       >
-        front . jaewon
+        f.e JW
       </Link>
     </Title>
     <Category>

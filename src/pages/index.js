@@ -13,19 +13,27 @@ const IndexPage = () => (
     <SEO title="장재원" />
     <Containner>
       <AboutMe>
-        <Img src="icons/my_img.png" alt="메인사진" />
+        <Img>
+          <img src="icons/my_img.jpeg" alt="메인사진"></img>
+        </Img>
         <div>
           <h1>Front end, 장재원</h1>
           <span>
-            눈으로 즐길 수 있는 시각 디자인과 논리적인 생각을 하며 개발을
+            눈으로 즐길 수 있는 시각 디자인과 논리적인 생각을 하며 <br /> 개발을
             추구하는 개발자 입니다.
           </span>
         </div>
       </AboutMe>
       <IconContainer>
-        <FaGithub size="50" color="black" />
-        <FaBloggerB size="50" color="black" />
-        <HiMail size="50" color="black" />
+        <a href="http://github.com/appWon">
+          <FaGithub size="50" color="black" />
+        </a>
+        <a href="https://velog.io/@app235">
+          <FaBloggerB size="50" color="black" />
+        </a>
+        <a href="mailto:korkrip11@gmail.com">
+          <HiMail size="50" color="black" />
+        </a>
       </IconContainer>
       <div class="sectionBreack"></div>
       <Description>
@@ -73,9 +81,20 @@ const Containner = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
 `
-const Img = styled.img`
-  width: 200px;
-  height: 400px;
+const Img = styled.div`
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 450px;
+    height: 300px;
+    max-width: initial;
+    margin-top: 0%;
+    margin-left: -10%;
+  }
+  /* border-radius: 50%; */
 `
 
 const AboutMe = styled.div`

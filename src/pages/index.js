@@ -4,9 +4,9 @@ import styled from "styled-components"
 import { FaGithub, FaBloggerB, FaSass } from "react-icons/fa"
 import { SiJavascript, SiReact, SiVueDotJs } from "react-icons/si"
 import { HiMail } from "react-icons/hi"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import MyImg from "../images/myImg.jpeg"
 
 const IndexPage = () => (
   <Layout>
@@ -14,7 +14,7 @@ const IndexPage = () => (
     <Containner>
       <AboutMe>
         <Img>
-          <img src="icons/my_img.jpeg" alt="메인사진"></img>
+          <img src={MyImg}></img>
         </Img>
         <div>
           <h1>Front end, 장재원</h1>
@@ -94,7 +94,6 @@ const Img = styled.div`
     margin-top: 0%;
     margin-left: -10%;
   }
-  /* border-radius: 50%; */
 `
 
 const AboutMe = styled.div`

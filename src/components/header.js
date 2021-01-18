@@ -27,6 +27,15 @@ const Header = props => (
       >
         <span>#</span>프로젝트
       </Link>
+      <Link
+        to="/blog"
+        style={{
+          color: `white`,
+          textDecoration: `none`,
+        }}
+      >
+        <span>#</span>블로그
+      </Link>
     </Category>
   </HeaderContainer>
 )
@@ -62,9 +71,15 @@ const Category = styled.div`
 
   a {
     color: black !important;
-
+    margin-left: 30px;
     span {
       margin: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    a {
+      margin-left: 10px;
     }
   }
 `

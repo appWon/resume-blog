@@ -49,8 +49,11 @@ const IndexPage = () => (
         {CAREER_LIST.map(list => {
           return (
             <div class="careerContainer">
-              <h3>{list.title}</h3>
-              <span>{list.date}</span>
+              <div>
+                <h3>{list.title}</h3>
+                <span>{list.date}</span>
+              </div>
+              <h5>{list.subtitle}</h5>
               <ul>
                 {list.dataList.map(content => {
                   return <li>{content}</li>
@@ -91,8 +94,9 @@ const Img = styled.div`
     width: 450px;
     height: 300px;
     max-width: initial;
+    object-fit: cover;
     margin-top: 0%;
-    margin-left: -10%;
+    margin-left: -12%;
   }
 `
 
@@ -159,7 +163,7 @@ const Career = styled.div`
   }
 
   .careerContainer {
-    width: 400px;
+    width: 450px;
     margin: 20px 0;
     h3 {
       display: inline-block;
@@ -175,24 +179,30 @@ const Career = styled.div`
 const CAREER_LIST = [
   {
     title: "WeCode",
+    subtitle:
+      "-코딩 부트캠프로 3개월이라는 짧은 기간 동안 3번의 팀 프로젝트를 진행하였습니다.",
     date: "2020년",
     dataList: [
-      "React 및 라이브러리를 활용하여 site clone",
-      "개발자 커뮤니티의 생성으로 활발한 정보 전달 가능",
-      "Brandi 회사 인턴",
+      "Trendi : 브랜디 사이트의 기능을 구현하는 프로젝트",
+      "AirBit & Byte : Air Bnb 사이트의 기능을 구현",
+      "브랜디 기업인턴 : 브랜디 기업에 인턴으로 한달 간 Vue js를 이용한  Admin  사이트의 상품등록 ,수정 , 데이터 필터 기능을 구현하였습니다.",
     ],
   },
   {
     title: "(주)이노텍",
+    subtitle:
+      "- 측정장비를 이용한 개발제품 성능 측정 후 데이터 관리를 하였습니다.",
     date: "2019년 ~ 2020년",
-    dataList: ["측정장비를 이용한 개발제품 성능측정 후 데이터 관리"],
+    dataList: [
+      "3차원 측정장비의 프로그램 동작 시퀸스 알고리즘 작성을 하였고 이 알고리즘을 활용하여 개발 제품의 스펙  아웃 여부를 파악과 개선 작업을 하였습니다.",
+    ],
   },
   {
     title: "(주)CIEC",
+    subtitle: "- 공공기관 개발 프로그램 납품을 하였습니다.",
     date: "2016년 ~ 2017년",
     dataList: [
-      "공공기관 개발 프로그램 납품",
-      "egov 활용하여 공공기관 내부 전산 시스템 개발",
+      "전자정부 프레임워크를 이용하여 공공기관 내부 전산 프로그램 개발에 참여 하였고, 문화재 데이터를 CRUD 기능을 하였습니다.",
     ],
   },
 ]

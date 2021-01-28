@@ -1,12 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
 import { FaGithub, FaBloggerB, FaSass } from "react-icons/fa"
 import { SiJavascript, SiReact, SiVueDotJs } from "react-icons/si"
 import { HiMail } from "react-icons/hi"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import MyImg from "../images/myImg.jpeg"
+import styled from "styled-components"
+import SEO from "../components/seo"
 
 const IndexPage = () => (
   <Layout>

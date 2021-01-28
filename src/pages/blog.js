@@ -1,70 +1,77 @@
-import React from "react"
+import React, { useState } from "react"
+import { graphql } from "gatsby"
+import { Category } from "../components/category"
+import { PostList } from "../components/postList"
+import { useCategory } from "../hooks/useCategory"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { useStaticQuery, graphql } from "gatsby"
-import { Link } from "gatsby"
-import { Card, Avatar } from "antd"
 import styled from "styled-components"
+import SEO from "../components/seo"
 
-const { Meta } = Card
+export default function BlogPage({ data: { categories, postList } }) {
+  const [category, selectCategory] = useCategory()
 
-export default function BlogPage() {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              date
-              title
-              slug
-            }
+  return (
+    <Layout>
+      <SEO title="블로그" />
+      <Category
+        categories={categories}
+        category={category}
+        selectCategory={selectCategory}
+      />
+      <PostList postList={postList} category={category} />
+    </Layout>
+  )
+}
+export const data = graphql`
+  query LoadPostQuery {
+    categories: allMarkdownRemark {
+      group(field: frontmatter___description) {
+        fieldValue
+      }
+    }
+    postList: allMarkdownRemark(filter: { frontmatter: { description: {} } }) {
+      edges {
+        node {
+          frontmatter {
+            description
+            title
+            date
+            slug
           }
         }
       }
     }
-  `)
-  return (
-    <Layout>
-      <SEO title="블로그" />
-      <Post>
-        {data.allMarkdownRemark.edges.map(
-          (
-            {
-              node: {
-                frontmatter: { slug, title, date },
-              },
-            },
-            index
-          ) => {
-            return (
-              <Link to={`/${slug}`}>
-                <Card
-                  hoverable
-                  style={{ width: 300 }}
-                  cover={
-                    <img
-                      alt="example"
-                      src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-                    />
-                  }
-                >
-                  <div key={index}>{title}</div>
-                  <div key={index}>{date}</div>
-                </Card>
-              </Link>
-            )
-          }
-        )}
-      </Post>
-    </Layout>
-  )
-}
+  }
+`
+// const PostList = styled.div`
+//   text-align: center;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   max-width: 1050px;
+// `
 
 const Post = styled.div`
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
   a {
+    width: 320px;
     margin: 10px;
   }
 `
+
+// const Category = styled.div`
+//   text-align: start;
+//   width: 100%;
+//   margin: 15px 0px;
+//   padding: 3px 20px;
+//   font-size: 20px;
+//   font-weight: bold;
+
+//   span {
+//     padding: 5px 10px;
+//   }
+// `

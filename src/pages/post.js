@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Layout } from "../layout"
 import { graphql } from "gatsby"
-import styled from "styled-components"
+import SEO from "../components/seo"
 
-export default function BlogPage(props) {
+export default function PostPage(props) {
   return (
     <Layout>
       <SEO title="블로그" />

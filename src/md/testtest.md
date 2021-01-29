@@ -1,9 +1,9 @@
 ---
-path: "http://www.naver.com"
-date: "2021-01-18"
-title: "인스타 기능 구현(1)"
-slug: test1
-description: ["Javascript", "Vue"]
+date: "2021-01-29"
+title: "zxzzzzzzzzzzzzz"
+slug: "zzzz"
+description: ["Javascript", "React", "zxcv"]
+tumnail: "https://images.velog.io/images/app235/post/5e99b569-7f83-46ad-9712-4982ee455bfe/%EB%85%B9%ED%99%94_2020_10_31_22_32_09_978.gif"
 ---
 
 ![](https://images.velog.io/images/app235/post/5e99b569-7f83-46ad-9712-4982ee455bfe/%EB%85%B9%ED%99%94_2020_10_31_22_32_09_978.gif)

@@ -1,19 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Header } from "../components/header"
+
 import "antd/dist/antd.css"
-import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
+export const Layout = ({ children }) => {
   return (
     <LayoutContainer>
       <Header />
       <div>
         <main>{children}</main>
-        <footer></footer>
       </div>
     </LayoutContainer>
   )
@@ -37,5 +34,3 @@ const LayoutContainer = styled.div`
     align-items: center;
   }
 `
-
-export default Layout

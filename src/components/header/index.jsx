@@ -1,10 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
-const Header = props => (
+export const Header = props => (
   <HeaderContainer>
     <Title>
       <Link
@@ -83,4 +81,3 @@ const Category = styled.div`
     }
   }
 `
-export default Header

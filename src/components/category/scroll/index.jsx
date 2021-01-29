@@ -1,7 +1,7 @@
 import React, { useMemo } from "react"
 import { Radio } from "antd"
 
-export const Category = ({ categories, category, selectCategory }) => {
+export const Scroll = ({ categories, category, selectCategory }) => {
   const categoryList = useMemo(() => (
     <>
       <Radio.Group

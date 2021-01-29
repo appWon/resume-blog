@@ -6,7 +6,12 @@ module.exports = {
   },
   pathPrefix: "resume-blog",
   plugins: [
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [`gatsby-remark-prismjs`],
+      },
+    },
     "gatsby-plugin-slug",
     `gatsby-plugin-react-helmet`,
     {

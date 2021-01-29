@@ -1,9 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql } from "gatsby"
 import { Category } from "../components/category"
 import { PostList } from "../components/postList"
 import { useCategory } from "../hooks/useCategory"
-import Layout from "../components/layout"
+import { Layout } from "../layout"
 import styled from "styled-components"
 import SEO from "../components/seo"
 
@@ -14,14 +14,15 @@ export default function BlogPage({ data: { categories, postList } }) {
     <Layout>
       <SEO title="블로그" />
       <Category
-        categories={categories}
-        category={category}
         selectCategory={selectCategory}
+        category={category}
+        categories={categories}
       />
       <PostList postList={postList} category={category} />
     </Layout>
   )
 }
+
 export const data = graphql`
   query LoadPostQuery {
     categories: allMarkdownRemark {
@@ -37,21 +38,14 @@ export const data = graphql`
             title
             date
             slug
+            tumnail
           }
+          excerpt(pruneLength: 100, truncate: false)
         }
       }
     }
   }
 `
-// const PostList = styled.div`
-//   text-align: center;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   max-width: 1050px;
-// `
-
 const Post = styled.div`
   display: flex;
   justify-content: center;
@@ -62,16 +56,3 @@ const Post = styled.div`
     margin: 10px;
   }
 `
-
-// const Category = styled.div`
-//   text-align: start;
-//   width: 100%;
-//   margin: 15px 0px;
-//   padding: 3px 20px;
-//   font-size: 20px;
-//   font-weight: bold;
-
-//   span {
-//     padding: 5px 10px;
-//   }
-// `

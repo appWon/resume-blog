@@ -2,7 +2,7 @@ import React from "react"
 import { FaGithub, FaBloggerB, FaSass } from "react-icons/fa"
 import { SiJavascript, SiReact, SiVueDotJs } from "react-icons/si"
 import { HiMail } from "react-icons/hi"
-import Layout from "../components/layout"
+import { Layout } from "../layout"
 import MyImg from "../images/myImg.jpeg"
 import styled from "styled-components"
 import SEO from "../components/seo"
@@ -63,9 +63,6 @@ const IndexPage = () => (
         })}
       </Career>
     </Containner>
-
-    {/* <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link> */}
   </Layout>
 )
 

@@ -19,7 +19,11 @@ export const Content = ({ data: { frontmatter, html } }) => {
 }
 
 const PostContent = styled.div`
-  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+  padding: 15px;
 `
 
 const Title = styled.h1`
@@ -60,7 +64,8 @@ const MarkDownData = styled.div`
   }
 
   p {
-    font-size: 16px;
+    white-space: pre-wrap;
+    font-size: 18px;
   }
 
   img {
@@ -70,13 +75,12 @@ const MarkDownData = styled.div`
 
   pre {
     white-space: pre-wrap;
+    border-radius: 15px;
   }
 
-  @media screen and (max-width: 500px) {
-    padding: 0 5px;
-
-    img {
-      width: 500px;
+  @media screen and (max-width: 700px) {
+    pre {
+      font-size: 10px;
     }
   }
 `

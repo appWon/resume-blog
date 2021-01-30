@@ -2,7 +2,6 @@ import React, { useMemo } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { Card } from "./card"
-// import { Card } from "antd"
 
 export const PostList = ({ postList, category }) => {
   const postFilter = useMemo(() =>
@@ -15,7 +14,6 @@ export const PostList = ({ postList, category }) => {
 
   return (
     <Posts>
-      {console.log("postFilter", postFilter)}
       {postFilter.map(({ node }, index) => (
         <Link to={node.frontmatter.slug} key={index}>
           <Card data={node} />

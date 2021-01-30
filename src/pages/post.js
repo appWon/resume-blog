@@ -1,19 +1,14 @@
 import React from "react"
+import SEO from "../components/seo"
 import { Layout } from "../layout"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
+import { Content } from "../components/content"
 
 export default function PostPage(props) {
   return (
     <Layout>
       <SEO title="블로그" />
-      <div>
-        <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-        <p>{props.data.markdownRemark.frontmatter.date}</p>
-        <div
-          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-        />
-      </div>
+      <Content data={props.data.markdownRemark} />
     </Layout>
   )
 }
@@ -24,6 +19,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        description
       }
       html
     }

@@ -28,7 +28,7 @@ const PostCard = styled.div`
 
 const ThumNail = styled.img`
   height: 200px;
-  width: 100%;
+  width: 320px;
   border-radius: 18px;
   object-fit: cover;
 `
@@ -40,7 +40,7 @@ const Content = styled.div`
   justify-content: space-between;
 
   h4 {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
   }
 

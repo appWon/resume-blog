@@ -40,7 +40,7 @@ export const data = graphql`
             slug
             tumnail
           }
-          excerpt(pruneLength: 100, truncate: false)
+          excerpt(pruneLength: 90, truncate: false)
         }
       }
     }

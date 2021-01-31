@@ -30,7 +30,7 @@ const ThumNail = styled.img`
   height: 200px;
   width: 320px;
   border-radius: 18px;
-  object-fit: cover;
+  object-fit: contain;
 `
 
 const Content = styled.div`
@@ -49,7 +49,7 @@ const Content = styled.div`
   }
 
   .date {
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 400;
     font-size: 13px;
     color: #646464;

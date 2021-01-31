@@ -22,13 +22,13 @@ const PostContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0;
-  padding: 15px;
+  overflow: auto;
+  padding: 30px 0;
 `
 
 const Title = styled.h1`
-  font-weight: 400;
   font-size: 40px;
+  font-weight: bold;
   text-align: center;
 `
 
@@ -49,7 +49,7 @@ const Category = styled.span`
   }
 `
 const MarkDownData = styled.div`
-  max-width: 1080px;
+  max-width: 800px;
 
   p {
     white-space: nowrap;
@@ -74,13 +74,32 @@ const MarkDownData = styled.div`
   }
 
   pre {
+    padding: 20px;
     white-space: pre-wrap;
     border-radius: 15px;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
+    max-width: 550px;
+
+    p {
+      font-size: 15px;
+    }
+
     pre {
-      font-size: 10px;
+      font-size: 13px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    max-width: 450px;
+
+    p {
+      font-size: 13px;
+    }
+
+    pre {
+      font-size: 11px;
     }
   }
 `

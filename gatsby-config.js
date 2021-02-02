@@ -7,6 +7,7 @@ module.exports = {
   },
   pathPrefix: "resume-blog",
   plugins: [
+    "gatsby-plugin-robots-txt",
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,

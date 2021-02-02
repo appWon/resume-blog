@@ -19,15 +19,15 @@ export default function IndexPage({ data: { categories, postList } }) {
 export const data = graphql`
   query LoadPostQuery {
     categories: allMarkdownRemark {
-      group(field: frontmatter___description) {
+      group(field: frontmatter___category) {
         fieldValue
       }
     }
-    postList: allMarkdownRemark(filter: { frontmatter: { description: {} } }) {
+    postList: allMarkdownRemark(filter: { frontmatter: { category: {} } }) {
       edges {
         node {
           frontmatter {
-            description
+            category
             title
             date
             slug

@@ -7,7 +7,7 @@ export const PostList = ({ postList, category }) => {
   const postFilter = useMemo(() =>
     category !== "All"
       ? postList.edges.filter(({ node }) =>
-          node.frontmatter.description.some(item => item === category)
+          node.frontmatter.category.some(item => item === category)
         )
       : postList.edges
   )

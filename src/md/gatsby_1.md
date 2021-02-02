@@ -1,11 +1,13 @@
 ---
 date: "2021-01-29"
 
-title: "Gatsby 블로그 만들기(1)"
+title: "Gatsby 블로그 만드는 방법 1)"
 
-slug: "Gatsby"
+slug: "make_gatsby_1"
 
-description: ["React", "Javascript", "Gatsby"]
+description: "게츠비란? 무엇이고 어떻게 만드는지 우선알아야 한다."
+
+category: ["React", "Javascript", "Gatsby"]
 
 tumnail: "https://images.velog.io/images/app235/post/4589e9e4-658b-4db4-8348-884d7d9a7523/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-01-29%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.25.59.png"
 ---
@@ -61,7 +63,7 @@ gatsby new my-gatsby-project https://github.com/gatsbyjs/gatsby-starter-default
 ```
   query LoadPostQuery {
     allMarkdownRemark {
-      group(field: frontmatter___description) {
+      group(field: frontmatter___category) {
         fieldValue
       }
     }

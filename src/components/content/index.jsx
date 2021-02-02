@@ -8,7 +8,7 @@ export const Content = ({ data: { frontmatter, html } }) => {
       <SubTitle>
         <WriteDate>{frontmatter.date}</WriteDate>/
         <Category>
-          {frontmatter.description.map(category => (
+          {frontmatter.category.map(category => (
             <span>{category}</span>
           ))}
         </Category>

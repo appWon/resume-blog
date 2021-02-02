@@ -1,11 +1,13 @@
 ---
-date: "2021-01-30"
+date: "2021-02-01"
 
-title: "Gatsby 블로그 만들기(2)"
+title: "Gatsby 블로그 만드는 방법 2)"
 
-slug: "Gatsby2"
+slug: "make_gatsby_2"
 
-description: ["React", "Javascript", "Gatsby"]
+description: "게츠비를 만들고 빌드까지 하는 방법"
+
+category: ["React", "Javascript", "Gatsby"]
 
 tumnail: "https://images.velog.io/images/app235/post/4589e9e4-658b-4db4-8348-884d7d9a7523/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202021-01-29%20%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE%209.25.59.png"
 ---
@@ -121,15 +123,15 @@ export default function BlogPage({ data: { categories, postList } }) {
 export const data = graphql`
   query LoadPostQuery {
     categories: allMarkdownRemark {
-      group(field: frontmatter___description) {
+      group(field: frontmatter___category) {
         fieldValue
       }
     }
-    postList: allMarkdownRemark(filter: { frontmatter: { description: {} } }) {
+    postList: allMarkdownRemark(filter: { frontmatter: { category: {} } }) {
       edges {
         node {
           frontmatter {
-            description
+            category
             title
             date
             slug
@@ -213,7 +215,7 @@ export const PostList = ({ postList, category }) => {
   const postFilter = useMemo(() =>
     category !== "All"
       ? postList.edges.filter(({ node }) =>
-          node.frontmatter.description.some(item => item === category)
+          node.frontmatter.category.some(item => item === category)
         )
       : postList.edges
   )
@@ -263,7 +265,7 @@ exports.createPages = async ({ graphql, actions }) => {
               slug
             }
             frontmatter {
-              description
+              category
               date
               title
             }
@@ -316,7 +318,7 @@ export const query = graphql`
       frontmatter {
         title
         date
-        description
+        category
       }
       html
     }

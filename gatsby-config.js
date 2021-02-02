@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `JJ-blog`,
-    description: `jaewon - blog`,
-    author: `@gatsbyjs`,
+    description: `외우는게 아닌 습득하는 개발자`,
+    author: `jaewon`,
     siteUrl: `https://appwon.netlify.app/`,
   },
-  pathPrefix: "resume-blog",
   plugins: [
     "gatsby-plugin-robots-txt",
     `gatsby-plugin-sitemap`,

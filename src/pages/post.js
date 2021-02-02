@@ -4,11 +4,14 @@ import { Layout } from "../layout"
 import { graphql } from "gatsby"
 import { Content } from "../components/content"
 
-export default function PostPage(props) {
+export default function PostPage({ data }) {
   return (
     <Layout>
-      <SEO title="블로그" />
-      <Content data={props.data.markdownRemark} />
+      <SEO
+        title={data.markdownRemark.frontmatter.title}
+        description={data.markdownRemark.frontmatter.description}
+      />
+      <Content data={data.markdownRemark} />
     </Layout>
   )
 }
@@ -19,7 +22,7 @@ export const query = graphql`
       frontmatter {
         title
         date
-        description
+        category
       }
       html
     }

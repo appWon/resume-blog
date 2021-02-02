@@ -7,7 +7,7 @@ export const Categories = props => {
     graphql`
       query {
         allMarkdownRemark {
-          group(field: frontmatter___description) {
+          group(field: frontmatter___category) {
             fieldValue
           }
         }

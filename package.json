@@ -1,9 +1,9 @@
 {
-  "name": "jaewon-resum-blog",
+  "name": "jj-blog",
   "private": true,
-  "description": "java sciprt and react by jaewon",
+  "description": "javasciprt and react by jaewon",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "jaewon <korkrip11@gmail.com>",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
@@ -23,6 +23,7 @@
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
     "gatsby-plugin-sharp": "^2.8.0",
+    "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-slug": "^1.1.1",
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-remark-prismjs": "^3.12.0",

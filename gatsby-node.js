@@ -30,29 +30,10 @@ exports.createPages = async ({ graphql, actions }) => {
   res.data.allMarkdownRemark.edges.forEach(edge => {
     createPage({
       component: postTemplate,
-      path: `blog${edge.node.fields.slug}`,
+      path: edge.node.fields.slug,
       context: {
         slug: edge.node.fields.slug,
       },
     })
   })
-
-  // posts.forEach(({ node }) => {
-  //   createPage({
-  //     path: node.fields.slug,
-  //     component: blogPostTemplate,
-  //   })
-  // })
-
-  // const tags = res.data.tagsGroup.group
-  // // Make tag pages
-  // tags.forEach(tag => {
-  //   createPage({
-  //     path: `/tag/`,
-  //     component: tagTemplate,
-  //     context: {
-  //       tag: tag.fieldValue,
-  //     },
-  //   })
-  // })
 }

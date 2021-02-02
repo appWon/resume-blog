@@ -1,4 +1,4 @@
-import React, { useMemo } from "react"
+import React, { useMemo, useEffect } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { Card } from "./card"

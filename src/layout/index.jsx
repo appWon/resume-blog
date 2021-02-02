@@ -9,9 +9,7 @@ export const Layout = ({ children }) => {
   return (
     <LayoutContainer>
       <Header />
-      <div>
-        <main>{children}</main>
-      </div>
+      <main>{children}</main>
     </LayoutContainer>
   )
 }
@@ -24,6 +22,8 @@ const LayoutContainer = styled.div`
   @import "~bootstrap/scss/bootstrap";
   @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
 
+  display: flex;
+
   * {
     font-family: "Roboto", sans-serif;
   }
@@ -32,5 +32,6 @@ const LayoutContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
   }
 `

@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `resume-blog`,
-    description: `jaewon - resum - blog`,
+    title: `JJ-blog`,
+    description: `jaewon - blog`,
     author: `@gatsbyjs`,
+    siteUrl: `https://appwon.netlify.app/`,
   },
   pathPrefix: "resume-blog",
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {

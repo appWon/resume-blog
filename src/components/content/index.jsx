@@ -23,7 +23,7 @@ const PostContent = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: auto;
-  padding: 30px 0;
+  padding: 30px 20px;
 `
 
 const Title = styled.h1`

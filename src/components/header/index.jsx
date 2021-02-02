@@ -1,48 +1,32 @@
 import React from "react"
 import styled from "styled-components"
+import { Categories } from "../category"
 import { Link } from "gatsby"
 
-export const Header = props => (
-  <HeaderContainer>
-    <Title>
-      <Link
-        to="/"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
-        f.e JW
-      </Link>
-    </Title>
-    <Category>
-      <Link
-        to="/project"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
-        <span>#</span>프로젝트
-      </Link>
-      <Link
-        to="/blog"
-        style={{
-          color: `white`,
-          textDecoration: `none`,
-        }}
-      >
-        <span>#</span>블로그
-      </Link>
-    </Category>
-  </HeaderContainer>
-)
+export const Header = props => {
+  return (
+    <HeaderContainer>
+      <Title>
+        <Link
+          to="/"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+        >
+          f.e JW
+        </Link>
+      </Title>
+      <Categories />
+    </HeaderContainer>
+  )
+}
 
 const HeaderContainer = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 150px;
+  padding: 10px 40px;
   background-color: #f7fafa;
 
   @media screen and (max-width: 768px) {
@@ -54,30 +38,5 @@ const Title = styled.h1`
 
   a {
     color: black !important;
-  }
-`
-
-const Category = styled.div`
-  display: flex;
-  align-items: center;
-
-  * {
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
-  }
-
-  a {
-    color: black !important;
-    margin-left: 30px;
-    span {
-      margin: 0;
-    }
-  }
-
-  @media screen and (max-width: 768px) {
-    a {
-      margin-left: 10px;
-    }
   }
 `

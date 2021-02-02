@@ -1,20 +1,40 @@
-import React, { useMemo } from "react"
-import { Radio } from "antd"
+import React from "react"
+import styled from "styled-components"
+import { useStaticQuery, graphql } from "gatsby"
 
-export const Category = ({ categories, category, selectCategory }) => {
-  const categoryList = useMemo(() => (
-    <>
-      <Radio.Group
-        onChange={selectCategory}
-        value={category}
-        defaultValue="All"
-      >
-        <Radio.Button value="All">All</Radio.Button>
-        {categories.group.map(({ fieldValue }) => (
-          <Radio.Button value={fieldValue}>{fieldValue}</Radio.Button>
-        ))}
-      </Radio.Group>
-    </>
-  ))
-  return <> {categoryList} </>
+export const Categories = props => {
+  const { allMarkdownRemark } = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark {
+          group(field: frontmatter___description) {
+            fieldValue
+          }
+        }
+      }
+    `
+  )
+
+  const clickCategory = fieldValue => {
+    window.history.pushState("", "", `?category=${fieldValue}`)
+  }
+
+  return (
+    <CategoryList>
+      {allMarkdownRemark.group.map(({ fieldValue }) => (
+        <li onClick={() => clickCategory(fieldValue)}>{fieldValue}</li>
+      ))}
+    </CategoryList>
+  )
 }
+
+const CategoryList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: start;
+
+  li {
+    cursor: pointer;
+  }
+`

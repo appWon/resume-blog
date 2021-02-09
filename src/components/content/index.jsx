@@ -52,29 +52,40 @@ const MarkDownData = styled.div`
   max-width: 800px;
 
   p {
-    white-space: nowrap;
+    margin-top: 40px 0 0 0;
+    white-space: pre-wrap;
+    font-size: 18px;
+
+    img {
+      margin: 40px 0 0 0;
+      max-width: 100%;
+      object-fit: cover;
+    }
   }
 
   h1 {
+    margin: 50px 0 0 0;
     font-size: 30px;
+    font-weight: bold;
   }
 
   h2 {
+    margin: 50px 0 0 0;
     font-size: 23px;
+    font-weight: bold;
   }
 
-  p {
-    white-space: pre-wrap;
-    font-size: 18px;
-  }
-
-  img {
-    max-width: 100%;
-    object-fit: cover;
+  ol,
+  ul {
+    li {
+      margin: 20px;
+      font-size: 15px;
+    }
   }
 
   pre {
     padding: 20px;
+    margin-top: 40px;
     white-space: pre-wrap;
     border-radius: 15px;
   }

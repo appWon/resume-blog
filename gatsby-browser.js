@@ -1,4 +1,4 @@
-require("prismjs/themes/prism-solarizedlight.css")
+require("prismjs/themes/prism-tomorrow.css")
 
 /**
  * Implement Gatsby's Browser APIs in this file.

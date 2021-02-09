@@ -14,7 +14,7 @@ export const Card = ({ data: { frontmatter, excerpt } }) => {
   )
 }
 
-const PostCard = styled.div`
+const PostCard = styled.article`
   width: 320px;
   margin: 15px;
   transition: 0.2s;

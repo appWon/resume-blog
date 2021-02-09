@@ -23,7 +23,7 @@ export const PostList = ({ postList, category }) => {
   )
 }
 
-const Posts = styled.div`
+const Posts = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

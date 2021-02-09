@@ -22,7 +22,7 @@ export const Header = props => {
   )
 }
 
-const HeaderContainer = styled.div`
+const HeaderContainer = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;

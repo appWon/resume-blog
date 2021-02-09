@@ -39,13 +39,3 @@ export const data = graphql`
     }
   }
 `
-const Post = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
-  a {
-    width: 320px;
-    margin: 10px;
-  }
-`

@@ -15,7 +15,8 @@ export const Card = ({ data: { frontmatter, excerpt } }) => {
 }
 
 const PostCard = styled.article`
-  width: 320px;
+  width: 355px;
+  height: 350px;
   margin: 15px;
   transition: 0.2s;
   border-radius: 18px;
@@ -27,21 +28,24 @@ const PostCard = styled.article`
 `
 
 const ThumNail = styled.img`
-  height: 200px;
-  width: 320px;
-  border-radius: 18px;
+  width: 100%;
+  height: 51%;
   object-fit: contain;
 `
 
 const Content = styled.div`
   display: flex;
   padding: 10px;
+  height: 49%;
   flex-direction: column;
   justify-content: space-between;
 
   h4 {
     font-size: 17px;
     font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   p {

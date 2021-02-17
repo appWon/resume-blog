@@ -31,6 +31,7 @@ const ThumNail = styled.img`
   width: 100%;
   height: 51%;
   object-fit: contain;
+  border-radius: 18px 18px 0 0;
 `
 
 const Content = styled.div`

@@ -54,7 +54,7 @@ const MarkDownData = styled.div`
   p {
     margin-top: 40px 0 0 0;
     white-space: pre-wrap;
-    font-size: 18px;
+    font-size: 17px;
 
     img {
       margin: 40px 0 0 0;
@@ -71,7 +71,13 @@ const MarkDownData = styled.div`
 
   h2 {
     margin: 50px 0 0 0;
-    font-size: 23px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  h3 {
+    margin: 50px 0 0 0;
+    font-size: 22px;
     font-weight: bold;
   }
 

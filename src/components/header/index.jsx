@@ -1,38 +1,36 @@
 import React from "react"
 import styled from "styled-components"
-import { Categories } from "../category"
 import { Link } from "gatsby"
 
-export const Header = props => {
+const Header = props => {
   return (
     <HeaderContainer>
       <Title>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          f.e JW
-        </Link>
+        <Link to="/">Fe JW</Link>
       </Title>
-      <Categories />
+      {navList.map((item, i) => (
+        <Category key={i}>
+          <Link to={item.url}>{item.label}</Link>
+        </Category>
+      ))}
     </HeaderContainer>
   )
 }
 
-const HeaderContainer = styled.aside`
+export default React.memo(Header)
+
+const HeaderContainer = styled.header`
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 10px 40px;
   background-color: #f7fafa;
+  height: 80px;
 
   @media screen and (max-width: 768px) {
     padding: 10px 30px;
   }
 `
+
 const Title = styled.h1`
   margin: 0;
 
@@ -40,3 +38,13 @@ const Title = styled.h1`
     color: black !important;
   }
 `
+
+const Category = styled.div``
+
+const navList = [
+  {
+    label: "categories",
+    url: "/categories",
+    iconClassName: "fa fa-book-open",
+  },
+]

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import { Header } from "../components/header"
+import Header from "../components/header"
 
 import "antd/dist/antd.css"
 
@@ -21,8 +21,6 @@ Layout.propTypes = {
 const LayoutContainer = styled.div`
   @import "~bootstrap/scss/bootstrap";
   @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap");
-
-  display: flex;
 
   * {
     font-family: "Roboto", sans-serif;

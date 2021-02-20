@@ -14,11 +14,13 @@ export const PostList = ({ postList, category }) => {
 
   return (
     <Posts>
-      {postFilter.map(({ node }, index) => (
-        <Link to={node.frontmatter.slug} key={index}>
-          <Card data={node} />
-        </Link>
-      ))}
+      {postFilter.map(({ node }, index) => {
+        return (
+          <Link to={node.fields.slug} key={index}>
+            <Card data={node} />
+          </Link>
+        )
+      })}
     </Posts>
   )
 }
